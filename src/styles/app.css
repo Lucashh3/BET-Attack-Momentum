@@ -1,0 +1,20 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.match-container {
+  transition: transform 0.2s ease;
+}
+
+.match-container.dragging {
+  opacity: 0.5;
+  transform: scale(0.95);
+}

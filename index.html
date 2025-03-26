@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Live football match scoreboards and stats.">
+    <meta name="author" content="Gabriel A. Velasco">
+    <link rel="icon" href="imgs/unxuxyqi.ico" type="image/x-icon">
+    <title>Attack Momentum</title>
+
+    <!-- Include CSS -->
+    <link rel="stylesheet" href="styles/apps.css">
+
+    <!-- Axios script -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Attack Momentum</h1>
+        <ul>
+            <li>SofaScore doesn't provide graphs for all matches.</li>
+            <li><b>Scoreboards/Stats</b> are <b>updated automatically.</b></li>
+            <li>Use zoom for better viewing (<b>CTRL</b> + <b>ScrollDown</b>/<b>ScrollUp</b>).</li>
+            <li><b>Drag/Select</b> a match card by clicking/holding at the <b>background</b> of it.</li>
+            <li><a href="https://gabrielvelasco.github.io/Attack-Momentum-React/" target="_blank">Other Version, with all stats (made with ReactJS)</a></li>
+        </ul>           
+    </header>
+
+    <main>
+        <div class="leagueSelector">
+            <label for="leagueSelector">Select League: </label>
+            <select id="leagueSelector">
+                <option value="All">All Leagues</option>
+            </select>
+        </div>
+
+        <div class="mainContainer"></div>
+    </main>
+
+    <footer>
+        <p><strong>Attack Momentum</strong> is a project that uses <strong>SofaScore API</strong> to provide live football match scoreboards and stats.</p>
+        <p>This version was entirely made with vanilla HTML/JS/CSS, so the code may be a mess...</p>
+        <p>More details: <a href="https://github.com/GabrielVelasco/BET-Attack-Momentum" target="_blank" rel="noopener noreferrer"><strong>GitHub Repo</strong></a></p>
+        <p>Any suggestions, just email me at <strong><a href="mailto:themrgabriel100@gmail.com">themrgabriel100@gmail.com</a></strong></p>
+    </footer>
+      
+    <!-- js modules... -->
+    <script src="scripts/app.js" type="module"></script>
+    <script src="scripts/dragAndDrop.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,290 @@
+/* .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+header ul {
+    width: 50%;
+    margin: 0 auto;
+    list-style-type: none;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    gap: 10px;
+    display: grid;
+    text-align: center;
+}
+
+body {
+    background-color: #f4f4f9;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.leagueSelector {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.leagueSelector label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.leagueSelector select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.leagueSelector select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.matchContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(72, 71, 71, 0.815);
+    width: 480px;
+    cursor: grab;
+    transition: background-color 0.3s ease;
+    background-color: #fff;
+}
+
+.matchContainer:hover {
+    background-color: #D6EEEE;
+}
+
+.matchContainer:active {
+    cursor: grabbing;
+}
+
+.matchContainer.over {
+    border: 2px dashed #000;
+}
+
+.divSelected {
+    background-color: #8fc5c5;
+    box-shadow: 0px 5px 5px rgba(72, 71, 71, 0.8);
+}
+
+.matchCardHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.matchCardHeader h2 {
+    width: 100%;
+    font-size: large;
+    margin: 0;
+    text-align: center;
+}
+
+iframe {
+    width: 100%;
+    height: 290px;
+    border: none;
+}
+
+.periodSelector {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    align-items: center;
+    margin: 10px auto 10px auto;
+    width: 40%;
+    border-radius: 10px;
+    border-width: 2px;
+    padding: 5px;
+    box-shadow: black;
+    box-shadow: 2px 2px 15px rgb(72 71 71 / 6%);
+}
+
+.periodBtn {
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.periodBtn:hover {
+    background-color: #e0e0e0;
+}
+
+.periodBtn.selected {
+    background-color: #3498db;
+    color: white;
+    border-color: #2980b9;
+}
+
+.statsDiv {
+    display: flex;
+    /* margin-bottom: 10px; */
+    font-size: 13px;
+    width: 100%;
+    gap: 10px;
+}
+
+.statsDiv div {
+    padding: 5px;
+}
+
+.statsDiv span {
+    font-size: 1.2em;
+    margin: 0 5px;
+}
+
+.statsDiv p {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.homeTeamsStatsDiv,
+.awayTeamsStatsDiv {
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+
+.homeTeamsStatsDiv p,
+.awayTeamsStatsDiv p {
+    margin: 0;
+}
+
+.homeTeamsStatsDiv p {
+    text-align: left;
+}
+
+.awayTeamsStatsDiv p {
+    text-align: right;
+}
+
+.homeTeamsStatsDiv div,
+.awayTeamsStatsDiv div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+}
+
+@media (max-width: 500px) {
+    .matchCardHeader h2, .leagueSelector label, .leagueSelector select {
+        font-size: 12px;
+    }
+
+    header ul,
+    footer,
+    .statsDiv {
+        font-size: 10px;
+    }
+
+    .statsDiv div {
+        padding: 2px;
+    }
+
+    .matchContainer {
+        width: 90%;
+    }
+
+    .closeBtn {
+        width: 47px;
+        height: 28px;
+        padding: 0;
+    }
+
+    .periodBtn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
